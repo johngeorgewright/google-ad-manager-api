@@ -33,19 +33,19 @@ test('line items', async () => {
 
 test('pagination', async () => {
   const client = await api.createLineItemServiceClient()
-  const results: LineItems[] = []
+  const items: LineItems[] = []
 
   for await (const result of iterate({
-    querySize: 10,
+    pageSize: 10,
     executeQuery: (limit, offset) =>
       query(client, 'getLineItemsByStatementAsync', {
         limit,
         offset,
       }),
   })) {
-    results.push(result)
-    if (results.length === 20) break
+    items.push(result)
+    if (items.length === 20) break
   }
 
-  expect(results).toHaveLength(20)
+  expect(items).toHaveLength(20)
 }, 10_000)

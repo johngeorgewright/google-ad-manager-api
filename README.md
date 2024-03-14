@@ -116,7 +116,6 @@ const api = new GoogleAdManager({
 const client = await api.createLineItemServiceClient()
 
 for await (const result of iterate({
-  querySize: 10,
   executeQuery: (limit, offset) =>
     query(client, 'getLineItemsByStatementAsync', {
       limit,

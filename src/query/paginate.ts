@@ -1,39 +1,75 @@
+import { setTimeout } from 'node:timers/promises'
 import { GetByStatementResponse } from './statement'
 
+export interface PaginateOptions<T> {
+  /**
+   * The "LIMIT" passed to queries
+   */
+  pageSize?: number
+
+  startingOffset?: number
+
+  /**
+   * If you want to make sure not to exceed your query quota,
+   * you can apply an interval inbetween each query
+   */
+  interval?: number
+
+  /**
+   * How to execute your query
+   */
+  executeQuery(
+    limit: number,
+    offset: number,
+  ):
+    | Promise<GetByStatementResponse<T>>
+    | Promise<[GetByStatementResponse<T>, ...any[]]>
+}
+
 /**
- * Paginate queries and receive each item as it arrives.
+ * Paginate queries.
  *
- * @deprecated Use {@link iterate:function} instead
+ * @see {@link PaginateOptions}
+ * @see {@link iterate}
  * @example
  * ```
- * async function getLineItems(limit: number, offset: number) {
- *   return query(
- *     client,
- *     'getLineItemsByStatementAsync',
- *     { limit, offset }
- *   )
- * }
- *
- * for await (const result of paginate(getLineItems, 10)) {
- *   console.info(result)
+ * for await (const page of paginate({
+ *   executeQuery: (limit, offset) =>
+ *     query(
+ *       client,
+ *       'getLineItemsByStatementAsync',
+ *       { limit, offset }
+ *     )
+ * })) {
+ *   console.info(page.items)
  * }
  * ```
  */
-export async function* paginate<T>(
-  executeQuery: (
-    limit: number,
-    offset: number
-  ) =>
-    | Promise<GetByStatementResponse<T>>
-    | Promise<[GetByStatementResponse<T>, ...any[]]>,
-  limit: number,
-  offset = 0
-): AsyncGenerator<T> {
-  const result = await executeQuery(limit, offset)
-  const response = Array.isArray(result) ? result[0] : result
-  if (response.rval?.results?.length) {
-    for (const result of response.rval.results) yield result
-    if (response.rval.results.length >= limit)
-      yield* paginate(executeQuery, limit, offset + limit)
+export async function* paginate<T>({
+  executeQuery,
+  interval = 0,
+  pageSize = 100,
+  startingOffset = 0,
+}: PaginateOptions<T>): AsyncGenerator<{
+  items: T[]
+  pageNum: number
+}> {
+  let offset = startingOffset
+  let finished = false
+  let pageNum = 0
+
+  while (!finished) {
+    const result = await executeQuery(pageSize, offset)
+    const response = Array.isArray(result) ? result[0] : result
+    const items = response.rval?.results || []
+
+    if (items.length) yield { items, pageNum: ++pageNum }
+
+    finished = items.length < pageSize
+
+    if (!finished) {
+      offset += pageSize
+      await setTimeout(interval)
+    }
   }
 }

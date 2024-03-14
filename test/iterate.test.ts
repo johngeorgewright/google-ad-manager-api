@@ -5,7 +5,7 @@ test('iterate', async () => {
   const results: number[] = []
 
   for await (const result of iterate({
-    querySize: 10,
+    pageSize: 10,
     executeQuery: async (limit, offset) =>
       offset >= 10
         ? {
@@ -47,7 +47,7 @@ test('iterate with returning all response info', async () => {
   const results: number[] = []
 
   for await (const result of iterate({
-    querySize: 10,
+    pageSize: 10,
     executeQuery: async (limit, offset) =>
       offset >= 10
         ? [

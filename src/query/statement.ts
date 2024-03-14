@@ -2,12 +2,14 @@ export type GetByStatementResponseResult<F extends GetByStatementAsync<any>> =
   F extends GetByStatementAsync<infer T> ? T : never
 
 export interface GetByStatementAsync<T extends Object> {
-  (getByStatement: GetByStatement): Promise<
+  (
+    getByStatement: GetByStatement,
+  ): Promise<
     [
       result: GetByStatementResponse<T>,
       rawResponse: any,
       soapHeader: any,
-      rawRequest: any
+      rawRequest: any,
     ]
   >
 }
