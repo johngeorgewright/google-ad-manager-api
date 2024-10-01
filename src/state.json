@@ -1,4 +1,1 @@
-{
-  "$schema": "./state.schema.json",
-  "versions": ["v202308", "v202311", "v202402", "v202405", "v202408"]
-}
+{"$schema":"./state.schema.json","versions":["v202311","v202402","v202405","v202408"]}
