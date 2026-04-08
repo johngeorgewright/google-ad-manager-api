@@ -40,7 +40,7 @@
     "@types/node": "24.12.0",
     "@types/sax": "1.2.7",
     "@types/source-map-support": "0.5.10",
-    "axios": "1.13.6",
+    "axios": "1.15.0",
     "cheerio": "1.2.0",
     "commitizen": "4.3.1",
     "concurrently": "9.2.1",
