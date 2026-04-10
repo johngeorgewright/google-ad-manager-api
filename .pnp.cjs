@@ -34,7 +34,7 @@ const RAW_RUNTIME_STATE =
           ["@dmgt/google-ad-manager-api", "workspace:."],\
           ["@johngw/fs", "npm:3.0.1"],\
           ["@types/lodash", "npm:4.17.24"],\
-          ["@types/node", "npm:24.12.0"],\
+          ["@types/node", "npm:25.6.0"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
           ["assert-never", "npm:1.4.0"],\
@@ -415,7 +415,7 @@ const RAW_RUNTIME_STATE =
           ["@dmgt/google-ad-manager-api", "workspace:."],\
           ["@johngw/fs", "npm:3.0.1"],\
           ["@types/lodash", "npm:4.17.24"],\
-          ["@types/node", "npm:24.12.0"],\
+          ["@types/node", "npm:25.6.0"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
           ["assert-never", "npm:1.4.0"],\
@@ -956,11 +956,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:24.12.0", {\
-        "packageLocation": "../../.yarn/berry/cache/@types-node-npm-24.12.0-ce6de09e0d-10c0.zip/node_modules/@types/node/",\
+      ["npm:25.6.0", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-node-npm-25.6.0-429799b5e8-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:24.12.0"],\
-          ["undici-types", "npm:7.16.0"]\
+          ["@types/node", "npm:25.6.0"],\
+          ["undici-types", "npm:7.19.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5757,10 +5757,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:7.16.0", {\
-        "packageLocation": "../../.yarn/berry/cache/undici-types-npm-7.16.0-0e23b08124-10c0.zip/node_modules/undici-types/",\
+      ["npm:7.19.2", {\
+        "packageLocation": "../../.yarn/berry/cache/undici-types-npm-7.19.2-93c792b6dd-10c0.zip/node_modules/undici-types/",\
         "packageDependencies": [\
-          ["undici-types", "npm:7.16.0"]\
+          ["undici-types", "npm:7.19.2"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -5852,7 +5852,7 @@ const RAW_RUNTIME_STATE =
           ["@types/esbuild", null],\
           ["@types/jiti", null],\
           ["@types/less", null],\
-          ["@types/node", "npm:24.12.0"],\
+          ["@types/node", "npm:25.6.0"],\
           ["@types/sass", null],\
           ["@types/sass-embedded", null],\
           ["@types/stylus", null],\
@@ -5999,7 +5999,7 @@ const RAW_RUNTIME_STATE =
           ["@types/edge-runtime__vm", null],\
           ["@types/happy-dom", null],\
           ["@types/jsdom", null],\
-          ["@types/node", "npm:24.12.0"],\
+          ["@types/node", "npm:25.6.0"],\
           ["@types/opentelemetry__api", null],\
           ["@types/vite", null],\
           ["@types/vitest__browser-playwright", null],\
