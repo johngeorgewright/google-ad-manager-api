@@ -1094,10 +1094,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@xmldom/xmldom", [\
-      ["npm:0.8.10", {\
-        "packageLocation": "../../.yarn/berry/cache/@xmldom-xmldom-npm-0.8.10-c1bd991e61-10c0.zip/node_modules/@xmldom/xmldom/",\
+      ["npm:0.8.13", {\
+        "packageLocation": "../../.yarn/berry/cache/@xmldom-xmldom-npm-0.8.13-0d167e2228-10c0.zip/node_modules/@xmldom/xmldom/",\
         "packageDependencies": [\
-          ["@xmldom/xmldom", "npm:0.8.10"]\
+          ["@xmldom/xmldom", "npm:0.8.13"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6203,7 +6203,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/xml-crypto-npm-6.0.0-5a313f1a01-10c0.zip/node_modules/xml-crypto/",\
         "packageDependencies": [\
           ["@xmldom/is-dom-node", "npm:1.0.1"],\
-          ["@xmldom/xmldom", "npm:0.8.10"],\
+          ["@xmldom/xmldom", "npm:0.8.13"],\
           ["xml-crypto", "npm:6.0.0"],\
           ["xpath", "npm:0.0.33"]\
         ],\
