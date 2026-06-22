@@ -1957,7 +1957,7 @@ const RAW_RUNTIME_STATE =
           ["cosmiconfig", "virtual:94da4eab1489c758b8437d58b69a5aaaeb58eca61fe6b91692925aa63b4576d99e1bbcc668f4571270d6293c75482ea4d6122e347a8266ae8b15d00d61a3eefe#npm:9.0.1"],\
           ["env-paths", "npm:2.2.1"],\
           ["import-fresh", "npm:3.3.0"],\
-          ["js-yaml", "npm:4.1.0"],\
+          ["js-yaml", "npm:4.2.0"],\
           ["parse-json", "npm:5.2.0"],\
           ["typescript", null]\
         ],\
@@ -1973,7 +1973,7 @@ const RAW_RUNTIME_STATE =
           ["@types/typescript", null],\
           ["cosmiconfig", "virtual:ab0b138988568fc1d4a212e374a9748df3d17d8eab9398c02e7d835ca66140c74a2db9f53d3b50b59c81589c32fe7f482677f061dc62255bf92b9e9634042916#npm:8.3.6"],\
           ["import-fresh", "npm:3.3.0"],\
-          ["js-yaml", "npm:4.1.0"],\
+          ["js-yaml", "npm:4.2.0"],\
           ["parse-json", "npm:5.2.0"],\
           ["path-type", "npm:4.0.0"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
@@ -3718,11 +3718,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["js-yaml", [\
-      ["npm:4.1.0", {\
-        "packageLocation": "../../.yarn/berry/cache/js-yaml-npm-4.1.0-3606f32312-10c0.zip/node_modules/js-yaml/",\
+      ["npm:4.2.0", {\
+        "packageLocation": "../../.yarn/berry/cache/js-yaml-npm-4.2.0-0ab78512c1-10c0.zip/node_modules/js-yaml/",\
         "packageDependencies": [\
           ["argparse", "npm:2.0.1"],\
-          ["js-yaml", "npm:4.1.0"]\
+          ["js-yaml", "npm:4.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
